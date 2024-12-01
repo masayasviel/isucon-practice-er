@@ -1,0 +1,16 @@
+{
+  "name": "private-isu-er",
+  "homepage": "https://masayasviel.github.io/private-isu-er",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d schemaspy-6.2.4/schema -b docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}
