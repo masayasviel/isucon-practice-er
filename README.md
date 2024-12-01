@@ -1,4 +1,4 @@
-# private-isu-er
+# isucon-practice-er
 
 ## 
 
