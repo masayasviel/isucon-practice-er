@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="isuconp" schema="isuconp" type="MySQL - 8.0.36-2ubuntu3">
+   <tables>
+      <table catalog="isuconp" name="comments" numRows="99773" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="post_id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="user_id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="comment" nullable="false" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="CURRENT_TIMESTAMP" digits="0" id="4" name="created_at" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="comments_idx_1" unique="false">
+            <column ascending="true" name="post_id"/>
+            <column ascending="false" name="created_at"/>
+         </index>
+      </table>
+      <table catalog="isuconp" name="posts" numRows="9771" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="user_id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="mime" nullable="false" remarks="" size="64" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="imgdata" nullable="false" remarks="" size="16777215" type="MEDIUMBLOB" typeCode="-4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="body" nullable="false" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="CURRENT_TIMESTAMP" digits="0" id="5" name="created_at" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="isuconp" name="users" numRows="1113" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="account_name" nullable="false" remarks="" size="64" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="passhash" nullable="false" remarks="" size="128" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="authority" nullable="false" remarks="" size="1" type="BIT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="del_flg" nullable="false" remarks="" size="1" type="BIT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="CURRENT_TIMESTAMP" digits="0" id="5" name="created_at" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="account_name" unique="true">
+            <column ascending="true" name="account_name"/>
+         </index>
+      </table>
+   </tables>
+</database>
